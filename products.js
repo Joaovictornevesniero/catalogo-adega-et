@@ -4,9 +4,9 @@
 const CONFIG = {
   nome: "Adega ET Drinks",
   bairro: "Freguesia",
-  // Número do WhatsApp da adega, só dígitos, com 55 + DDD.
-  // ATENÇÃO: valor de exemplo. Troque pelo número real antes de mostrar ao dono.
-  whatsapp: "5511999999999",
+  // Número do WhatsApp da adega, só dígitos, com 55 + DDD (ex.: "5511912345678").
+  // Vazio = modo demonstração: o WhatsApp abre com o pedido pronto e a pessoa escolhe o contato.
+  whatsapp: "",
   taxaEntrega: 5.0, // valor de exemplo; 0 para entrega grátis
   pedidoMinimo: 0,
   pagamentos: ["Pix", "Cartão na entrega", "Dinheiro"],

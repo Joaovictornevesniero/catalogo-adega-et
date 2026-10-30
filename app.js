@@ -248,7 +248,8 @@
       troco: f.troco.value.trim(),
       obs: f.obs.value.trim()
     });
-    var url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(texto);
+    var numero = String(CONFIG.whatsapp || "").replace(/\D/g, "");
+    var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
     window.open(url, "_blank", "noopener");
   }
 
