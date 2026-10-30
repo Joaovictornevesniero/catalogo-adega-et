@@ -1,0 +1,2 @@
+Salve a logo da adega nesta pasta com o nome: logo.png
+(quadrada, de preferência 256x256 ou maior). Sem ela, aparece o monograma "ET".

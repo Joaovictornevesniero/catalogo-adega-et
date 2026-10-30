@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adega ET Drinks | Peça pelo WhatsApp</title>
+  <meta name="description" content="Escolha os produtos e envie o pedido pelo WhatsApp, com total e endereço prontos.">
+  <meta name="theme-color" content="#14101f">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <img id="logo" class="logo" src="" alt="Logo da Adega ET Drinks" hidden>
+      <div id="monograma" class="monograma" aria-hidden="true">ET</div>
+      <div>
+        <h1 id="nome-adega">Adega ET Drinks</h1>
+        <p id="sub-adega" class="sub">Delivery pelo WhatsApp</p>
+      </div>
+    </div>
+    <label class="busca">
+      <span class="sr-only">Buscar produto</span>
+      <input id="busca" type="search" placeholder="Buscar produto..." autocomplete="off">
+    </label>
+    <nav id="abas" class="abas" aria-label="Categorias"></nav>
+  </header>
+
+  <main>
+    <p class="aviso-idade">Venda de bebida alcoólica proibida para menores de 18 anos.</p>
+    <div id="lista" class="grade"></div>
+    <p id="vazio" class="vazio" hidden>Nenhum produto encontrado.</p>
+  </main>
+
+  <footer class="rodape">
+    <small>Preços e produtos de exemplo, apenas demonstração.</small>
+  </footer>
+
+  <button id="abrir-carrinho" class="barra-carrinho" hidden>
+    <span id="barra-qtd">0 itens</span>
+    <strong>Ver pedido</strong>
+    <span id="barra-total">R$ 0,00</span>
+  </button>
+
+  <div id="fundo" class="fundo" hidden></div>
+  <aside id="carrinho" class="carrinho" aria-label="Seu pedido" hidden>
+    <div class="carrinho-topo">
+      <h2>Seu pedido</h2>
+      <button id="fechar-carrinho" class="fechar" aria-label="Fechar">&times;</button>
+    </div>
+
+    <div id="itens" class="itens"></div>
+
+    <form id="form" class="form" novalidate>
+      <label>Seu nome
+        <input name="nome" required autocomplete="name">
+      </label>
+      <label>Endereço de entrega (rua, número, complemento)
+        <input name="endereco" required autocomplete="street-address">
+      </label>
+      <label>Forma de pagamento
+        <select name="pagamento" id="pagamento"></select>
+      </label>
+      <label id="troco-box" hidden>Troco para quanto?
+        <input name="troco" inputmode="decimal" placeholder="Ex.: 100">
+      </label>
+      <label>Observações (opcional)
+        <textarea name="obs" rows="2" placeholder="Ex.: interfone com defeito, ligar ao chegar"></textarea>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="maior" required>
+        <span>Declaro que tenho 18 anos ou mais.</span>
+      </label>
+
+      <dl class="totais">
+        <div><dt>Subtotal</dt><dd id="t-sub">R$ 0,00</dd></div>
+        <div><dt>Entrega</dt><dd id="t-taxa">R$ 0,00</dd></div>
+        <div class="total"><dt>Total</dt><dd id="t-total">R$ 0,00</dd></div>
+      </dl>
+
+      <p id="erro" class="erro" role="alert" hidden></p>
+      <button type="submit" class="enviar">Enviar pedido pelo WhatsApp</button>
+      <button type="button" id="limpar" class="limpar">Limpar pedido</button>
+    </form>
+  </aside>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
