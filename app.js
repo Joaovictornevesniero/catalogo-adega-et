@@ -54,7 +54,9 @@
   /* ---------- cabeçalho / logo ---------- */
   function iniciarTopo() {
     $("nome-adega").textContent = CONFIG.nome;
-    $("sub-adega").textContent = "Delivery pelo WhatsApp · " + CONFIG.bairro;
+    $("sub-adega").textContent = "Delivery pelo WhatsApp" + (CONFIG.bairro ? " · " + CONFIG.bairro : "");
+    $("monograma").textContent = CONFIG.sigla || CONFIG.nome.trim().slice(0, 2).toUpperCase();
+    $("logo").alt = "Logo da " + CONFIG.nome;
     document.title = CONFIG.nome + " | Peça pelo WhatsApp";
 
     var logo = $("logo");

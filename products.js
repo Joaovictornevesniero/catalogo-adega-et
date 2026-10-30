@@ -2,8 +2,9 @@
 // CONFIGURAÇÃO DA ADEGA  (edite só este arquivo para mudar dados)
 // ============================================================
 const CONFIG = {
-  nome: "Adega ET Drinks",
-  bairro: "Freguesia",
+  nome: "Sua Adega",
+  sigla: "SA",   // letras do círculo quando não há logo
+  bairro: "",    // opcional, aparece ao lado de "Delivery pelo WhatsApp"
   // Número do WhatsApp da adega, só dígitos, com 55 + DDD (ex.: "5511912345678").
   // Vazio = modo demonstração: o WhatsApp abre com o pedido pronto e a pessoa escolhe o contato.
   whatsapp: "",
